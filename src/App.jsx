@@ -20,20 +20,35 @@ function App() {
       <Developer name="Abul Kala M" stack="Next.js"></Developer>
       <Developer name="Uzzaman Can" stack="Laravel"></Developer>
       <Player name="Thiago Alcantara" passAccuracy="98"></Player>
+      <Player name="Vitinha" passAccuracy="97"></Player>
+      <Player name="Alexis Mac Allister"></Player>
+      <Salami name="Eid-ul-Fitr" salami="900"></Salami>
     </>
   )
 }
 
-function Player(name, passAccuracy) {
+// 4. Checking if props is constant or just a parameter catagory that can be given any parameter name
 
+function Salami (eid){
+  console.log(eid.name, eid.salami); //props is just a parameter catagory and can be given any parameter name as the coder wants.
+}
+
+// 3. Destructured way of passing the value, no props needed
+
+function Player({name, passAccuracy = 90}) { // by assigning 90 to passAccuracy parameter, I'm setting a default value for it
   return (
-    <div>
-      {/* Spread all 'stats' into the component as individual props */}
-      <h3>Player: {name}</h3>
+    <div style ={
+      {
+        color: "white",
+        background: "linear-gradient(90deg, rgba(19, 56, 240, 1) 0%, rgba(7, 245, 106, 1) 25%, rgba(15, 212, 209, 1) 100%)",
+        margin: "2rem 0.5rem",
+        padding: "1rem 0.8rem 2rem"
+      }
+    }>
+      <h3>{name}</h3>
       <p>Pass accuracy: {passAccuracy}%</p>
     </div>
   );
-
 }
 
 // function Player() {
