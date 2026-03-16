@@ -3,6 +3,7 @@
 // import viteLogo from './assets/vite.svg'
 // import heroImg from './assets/hero.png'
 import './App.css'
+import ToDo from "./ToDo.jsx"
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
       <Player name="Vitinha" passAccuracy="97"></Player>
       <Player name="Alexis Mac Allister"></Player>
       <Salami name="Eid-ul-Fitr" salami="900"></Salami>
+      <ToDo task="Learn React" isDone={true}></ToDo>
+      <ToDo task="Learn React" isDone={false}></ToDo>
     </>
   )
 }
